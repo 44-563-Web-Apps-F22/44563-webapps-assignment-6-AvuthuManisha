@@ -11,31 +11,36 @@
 
     <form>
         <label for="base_amount">Enter base amount </label>
-        <input type="number" id="base_amount" name="base_amount" value=20> <br>
+        <input type="number" id="base_amount" name="base_amount" value=20> 
+        <br>
 
         <label for="discount_amount">Enter the discount percentage</label>
-        <input type="number" id="discount_amount" name="discount_amount" value=10> <br>
+        <input type="number" id="discount_amount" name="discount_amount" value=10> 
+        <br>
 
         <input type="button" onclick="discount()" value="Apply Discount">
         <br>
     </form>
 
 
-    <p id="result">This text will be replaced </p>
+    <p id="result">This text will be replaced with discounted amounts</p>
 
     <br>
     <form>
         <input type="radio" id="multiply" name="arithmetic" value="times" onclick="chooseOp()" checked>
-        <label for="multiply">*</label></br>
+        <label for="multiply">*</label>
+        <br>
 
         <input type="radio" id="divide" name="arithmetic" onclick="chooseOp()" value="divide">
-        <label for="divide">/</label></br>
+        <label for="divide">/</label>
+        <br>
 
         <input type="radio" id="exponential" name="arithmetic" onclick="chooseOp()" value="exponent">
-        <label for="exponential">**</label></br>
+        <label for="exponential">**</label>
+        <br>
     </form>
     <br>
-    <p id="result1">Calculations are displayed here</p>
+    <p id="result1">The Calculations will get displayed here</p>
 
     <script>
         function discount() {
