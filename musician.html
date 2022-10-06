@@ -1,71 +1,73 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>WebApps Assignment05</title>
-    </head>
 
- 
+<head>
+    <title>WebApps Assignment05</title>
+</head>
+
+
 <body>
 
-<h2>Musician guess by Manisha Avuthu</h2>
+    <h2>Musician guess by Manisha Avuthu</h2>
 
-<form>
-    <label for="person_name"> Enter the secret musician name </label>
-    <input type ="password" id="person_name" name="person_name" min=10 max=50 step=2 value="John Lennon"> <br>
+    <form>
+        <label for="person_name"> Enter the secret musician name </label>
+        <input type="password" id="person_name" name="person_name" min=10 max=50 step=2 value="John Lennon"> <br>
 
-    <label for="input_text"> Guess the musician </label>
-    <input type ="text" id="input_text" name="input_text" autofocus> <br>
+        <label for="input_text"> Guess the musician </label>
+        <input type="text" id="input_text" name="input_text" autofocus> <br>
 
-    <input type="button" onclick="checkGuess()" value="Check the guess">
-</form>
+        <input type="button" onclick="checkGuess()" value="Check the guess">
+    </form>
 
 
-<p id="result">This will store the Results</p>
+    <p id="result">This will store the Results</p>
 
-<script> 
-    var correct = 0;
-    var wrong = 0;
-    function checkGuess(){
-        console.log("Getting form values")
-        person_name = document.getElementById("person_name").value
-        input_text = document.getElementById("input_text").value
-        if(person_name === input_text){
-            correct++
-            document.getElementById("result").innerHTML="Correct "+correct;
-            alert("You got it right");
+    <script>
+        var correct = 0;
+        var wrong = 0;
+        function checkGuess() {
+            console.log("Getting form values")
+            person_name = document.getElementById("person_name").value
+            input_text = document.getElementById("input_text").value
+            if (person_name === input_text) {
+                correct++
+                document.getElementById("result").innerHTML = "Correct " + correct;
+                alert("You got it right");
+            }
+            else {
+                wrong++
+                document.getElementById("result").innerHTML = "Wrong " + wrong;
+                alert("Wrong Musician");
+            }
         }
-        else{
-            wrong++
-            document.getElementById("result").innerHTML="Wrong "+wrong;
-            alert("Wrong Musician");
-        }
-    }
     </script>
 
-<div class="container">
-    <img id="image" src="Ant.jpg" alt="Ant insect" width="100px" height="100px" onclick="swapImage()">
-</div>
-<script>
-    var useImage=1;
-    function swapImage(){
-        switch (useImage){
-            case 1:
-                document.getElementById("image").src="Ant.jpg";
-                useImage=2;
-                break;
-            case 2:
-                document.getElementById("image").src="Viceroy butterfly.jpg";
-                useImage=3;
-                break;
-            case 3:
-                document.getElementById("image").src="Underwing moth.jpg";
-                useImage=1;
-                break;
+    <div class="container">
+        <img id="image" src="Ant.jpg" alt="Ant insect" width="100px" height="100px" onclick="swapImage()">
+    </div>
+    <script>
+        var useImage = 1;
+        function swapImage() {
+            switch (useImage) {
+                case 1:
+                    document.getElementById("image").src = "Ant.jpg";
+                    useImage = 2;
+                    break;
+                case 2:
+                    document.getElementById("image").src = "Viceroy butterfly.jpg";
+                    useImage = 3;
+                    break;
+                case 3:
+                    document.getElementById("image").src = "Underwing moth.jpg";
+                    useImage = 1;
+                    break;
+            }
         }
-    }
-</script>
+    </script>
 
 
 
 </body>
-</html> 
+
+</html>
